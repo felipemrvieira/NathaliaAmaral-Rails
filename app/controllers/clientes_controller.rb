@@ -28,7 +28,7 @@ class ClientesController < ApplicationController
 
     respond_to do |format|
       if @cliente.save
-        format.html { redirect_to @cliente, notice: 'Cliente was successfully created.' }
+        format.html { redirect_to :controller => 'enderecos', :action => 'new'}
         format.json { render :show, status: :created, location: @cliente }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class ClientesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cliente_params
-      params.require(:cliente).permit(:nome, :cpf, :rg, :nascimento, :email, :tenefone, :obs)
+      params.require(:cliente).permit(:nome, :cpf, :rg, :nascimento, :email, :telefone, :obs)
     end
 end
