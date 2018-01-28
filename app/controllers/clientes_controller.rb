@@ -11,6 +11,10 @@ class ClientesController < ApplicationController
     @clientes = Cliente.aniversariante_mes
   end
 
+  def contratos
+    @clientes = Cliente.all
+  end
+
   # GET /clientes/1
   # GET /clientes/1.json
   def show
