@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Prestadors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>Cnpj</th>
+      <th>Cpf</th>
+      <th>Rua</th>
+      <th>Bairro</th>
+      <th>Numero</th>
+      <th>Cidade</th>
+      <th>Dadosbancarios</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prestadors.each do |prestador| %>
+      <tr>
+        <td><%= prestador.nome %></td>
+        <td><%= prestador.email %></td>
+        <td><%= prestador.telefone %></td>
+        <td><%= prestador.cnpj %></td>
+        <td><%= prestador.cpf %></td>
+        <td><%= prestador.rua %></td>
+        <td><%= prestador.bairro %></td>
+        <td><%= prestador.numero %></td>
+        <td><%= prestador.cidade %></td>
+        <td><%= prestador.dadosBancarios %></td>
+        <td><%= link_to 'Show', prestador %></td>
+        <td><%= link_to 'Edit', edit_prestador_path(prestador) %></td>
+        <td><%= link_to 'Destroy', prestador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prestador', new_prestador_path %>

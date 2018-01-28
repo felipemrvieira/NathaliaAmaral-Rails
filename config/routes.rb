@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :prestadors
   resources :servicos
   get '/clientes/aniversariantes', to: 'clientes#aniversariantes'
   get '/clientes/contratos', to: 'clientes#contratos'

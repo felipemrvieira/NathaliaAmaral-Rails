@@ -1,0 +1,67 @@
+<%= form_with(model: prestador, local: true) do |form| %>
+  <% if prestador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(prestador.errors.count, "error") %> prohibited this prestador from being saved:</h2>
+
+      <ul>
+      <% prestador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :prestador_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :prestador_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone, id: :prestador_telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cnpj %>
+    <%= form.text_field :cnpj, id: :prestador_cnpj %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf, id: :prestador_cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rua %>
+    <%= form.text_field :rua, id: :prestador_rua %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bairro %>
+    <%= form.text_field :bairro, id: :prestador_bairro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.text_field :numero, id: :prestador_numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cidade %>
+    <%= form.text_field :cidade, id: :prestador_cidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dadosBancarios %>
+    <%= form.text_field :dadosBancarios, id: :prestador_dadosBancarios %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @prestador.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @prestador.email %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @prestador.telefone %>
+</p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @prestador.cnpj %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @prestador.cpf %>
+</p>
+
+<p>
+  <strong>Rua:</strong>
+  <%= @prestador.rua %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @prestador.bairro %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @prestador.numero %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @prestador.cidade %>
+</p>
+
+<p>
+  <strong>Dadosbancarios:</strong>
+  <%= @prestador.dadosBancarios %>
+</p>
+
+<%= link_to 'Edit', edit_prestador_path(@prestador) %> |
+<%= link_to 'Back', prestadors_path %>
