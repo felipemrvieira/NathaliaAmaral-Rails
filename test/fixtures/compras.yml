@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hitorico: MyText
+  codigoNF: MyString
+  dataCompra: 2018-01-28
+  valor: 9.99
+  prcelamento: 1
+
+two:
+  hitorico: MyText
+  codigoNF: MyString
+  dataCompra: 2018-01-28
+  valor: 9.99
+  prcelamento: 1

@@ -1,0 +1,42 @@
+<%= form_with(model: compra, local: true) do |form| %>
+  <% if compra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(compra.errors.count, "error") %> prohibited this compra from being saved:</h2>
+
+      <ul>
+      <% compra.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :hitorico %>
+    <%= form.text_area :hitorico, id: :compra_hitorico %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codigoNF %>
+    <%= form.text_field :codigoNF, id: :compra_codigoNF %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dataCompra %>
+    <%= form.date_select :dataCompra, id: :compra_dataCompra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor %>
+    <%= form.text_field :valor, id: :compra_valor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parcelamento %>
+    <%= form.number_field :parcelamento, id: :compra_parcelamento %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

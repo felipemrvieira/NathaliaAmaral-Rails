@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hitorico:</strong>
+  <%= @compra.hitorico %>
+</p>
+
+<p>
+  <strong>Codigonf:</strong>
+  <%= @compra.codigoNF %>
+</p>
+
+<p>
+  <strong>Datacompra:</strong>
+  <%= @compra.dataCompra %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @compra.valor %>
+</p>
+
+<p>
+  <strong>Parcelamento:</strong>
+  <%= @compra.parcelamento %>
+</p>
+
+<%= link_to 'Edit', edit_compra_path(@compra) %> |
+<%= link_to 'Back', compras_path %>
