@@ -6,7 +6,7 @@ class Cliente < ApplicationRecord
   #   ) }
   #scope :aniversariante_mes, -> { where("month(nascimento) = ?", Time.now.month) }
   #scope :aniversariante_mes, -> { where("nascimento.strftime('%m') = ?", Time.now.month) }
-  #scope :aniversariante_mes, -> { where("strftime('%m', nascimento) = ?", Time.now.month) }
+  scope :aniversariante_mes, -> { where("strftime('%m', nascimento) = ?", Time.now.strftime('%m')) }
 
   def mes_nascimento
     nascimento.strftime("%m")
